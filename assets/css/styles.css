@@ -476,18 +476,54 @@ html, body {
 
 /* hero art */
 .hero-art {
-    width: 180px;
+    flex: 1;
+    min-width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.hero-logo {
-    width: 160px;
-    height: 160px;
-    object-fit: contain;
-    opacity: 0.95;
+
+
+.hero-banner {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 0 30px rgba(231, 202, 163, 0.2);
+    border: 1px solid rgba(231, 202, 163, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+    .hero-banner:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 40px rgba(231, 202, 163, 0.4);
+    }
+
+
+@media (max-width: 768px) {
+    .hero-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-art {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-banner {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+}
+
+
 
 /* ===========================
    SECTIONS
@@ -1150,5 +1186,37 @@ html, body {
         font-size: 0.95rem;
     }
 }
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent); /* uses your theme's gold tone */
+    color: var(--bg); /* deep maroon background for icon */
+    font-size: 28px;
+    padding: 14px 16px;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(231, 202, 163, 0.4);
+    z-index: 100;
+    animation: zoomPulse 2s infinite ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .whatsapp-float:hover {
+        transform: scale(1.15);
+        box-shadow: 0 0 18px rgba(231, 202, 163, 0.6);
+    }
+
+/* Zoom In Zoom Out Animation */
+@keyframes zoomPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
 
 

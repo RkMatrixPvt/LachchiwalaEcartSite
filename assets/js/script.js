@@ -49,54 +49,54 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ---------- Sample Data ---------- */
 function getSampleProducts(){
   return [
-    {
-      id: 1,
-      name: "Lachchi's Gulab Jamun (Box of 12)",
-      price: 399,
-      category: "Sweets",
-      image: "images/product1.jpg",
-      description: "Soft, syrupy gulab jamuns made with khoya and saffron."
-    },
-    {
-      id: 2,
-      name: "Kaju Katli Premium",
-      price: 699,
-      category: "Sweets",
-      image: "images/product2.jpg",
-      description: "Smooth cashew fudge with a silver leaf finish."
-    },
-    {
-      id: 3,
-      name: "Masala Chana Crunch",
-      price: 149,
-      category: "Snacks",
-      image: "images/product3.jpg",
-      description: "Crispy roasted chickpeas with tangy masala."
-    },
-    {
-      id: 4,
-      name: "Badam Milk (500 ml)",
-      price: 199,
-      category: "Beverages",
-      image: "images/product4.jpg",
-      description: "Rich almond milk with cardamom — chilled or warm."
-    },
-    {
-      id: 5,
-      name: "Rainbow Sprinkles Box",
-      price: 99,
-      category: "Baking",
-      image: "images/product5.jpg",
-      description: "Colorful sprinkles to add magic to desserts."
-    },
-    {
-      id: 6,
-      name: "Besan Ladoo (Pack)",
-      price: 249,
-      category: "Sweets",
-      image: "images/product6.jpg",
-      description: "Traditional besan ladoos made fresh daily."
-    }
+      {
+          id: 1,
+          name: "Buknu Blast",
+          price: 99,
+          category: "Spice Blend",
+          image: "assets/images/Products/buknublast/1.png",
+          description: "A fiery, traditional spice mix bursting with bold flavors — perfect for sprinkling on snacks."
+      },
+      {
+          id: 2,
+          name: "Kaitha Chaska",
+          price: 129,
+          category: "Fruit-Based Seasoning",
+          image: "assets/images/Products/kaithachaska/1.png",
+          description: "Tangy kaitha (wood apple) seasoning with a hint of sweetness — ideal for chaats and fruits."
+      },
+      {
+          id: 3,
+          name: "Tangy Touch",
+          price: 89,
+          category: "Snack Masala",
+          image: "assets/images/Products/tangytouch/1.png",
+          description: "Crispy roasted chickpeas coated in zesty masala — a crunchy, protein-packed snack."
+      },
+      {
+          id: 4,
+          name: "Zing Mix",
+          price: 109,
+          category: "Flavored Blend",
+          image: "assets/images/Products/zingmix/1.png",
+          description: "A vibrant mix of spices and herbs for instant zing — great with lemonade, yogurt, or salads."
+      },
+    //{
+    //  id: 5,
+    //  name: "Rainbow Sprinkles Box",
+    //  price: 99,
+    //  category: "Baking",
+    //  image: "images/product5.jpg",
+    //  description: "Colorful sprinkles to add magic to desserts."
+    //},
+    //{
+    //  id: 6,
+    //  name: "Besan Ladoo (Pack)",
+    //  price: 249,
+    //  category: "Sweets",
+    //  image: "images/product6.jpg",k
+    //  description: "Traditional besan ladoos made fresh daily."
+    //}
   ];
 }
 
@@ -137,7 +137,7 @@ function productCardHTML(p){
 function escapeHtml(s){ return (s+'').replace(/[&<>"']/g, c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[c]); }
 
 /* ---------- Cart (localStorage) ---------- */
-const CART_KEY = 'lachchiwala_cart';
+const CART_KEY = 'Lachchhiwala_cart';
 function readCart(){ try { return JSON.parse(localStorage.getItem(CART_KEY) || '[]'); } catch(e){return []} }
 function saveCart(cart){ localStorage.setItem(CART_KEY, JSON.stringify(cart)); updateCartCountUI(); }
 
