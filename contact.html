@@ -11,6 +11,37 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        #formMessage {
+            display: none;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        /* Loader spinner inside button */
+        .btn-loader {
+            display: none;
+            border: 2px solid #fff;
+            border-top: 2px solid #4CAF50;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            animation: spin 1s linear infinite;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -55,7 +86,7 @@
 
             <label>
                 Contact Number
-                <input name="phone" type="tel" pattern="[0-9]{10}" placeholder="Enter 10-digit number" required>
+                <input name="phone" type="tel" pattern="[0-9]{10}" maxlength="15" required>
             </label>
 
             <label>
@@ -75,7 +106,13 @@
                 <textarea name="message" rows="5" required></textarea>
             </label>
 
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" id="submitBtn" class="btn btn-primary">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loader"></span>
+            </button>
+
+            <!-- Message container -->
+            <div id="formMessage"></div>
         </form>
 
         <!-- Contact Info Section -->
@@ -83,7 +120,7 @@
             <h2>Our Contact Details</h2>
             <p>
                 <strong>Address:</strong> FH4, Happy Homes Apartment, Juhi Kalan, Saket Nagar, Kanpur, Uttar Pradesh 208014, India<br>
-                <strong>Email:</strong> <a href="lachchhiwala@gmail.com">lachchhiwala@gmail.com</a><br>
+                <strong>Email:</strong> <a href="mailto:lachchhiwala@gmail.com">lachchhiwala@gmail.com</a><br>
                 <strong>Phone:</strong> <a href="tel:+917310141205">+91 73101 41205</a>
             </p>
         </div>
@@ -120,6 +157,12 @@
         </div>
     </footer>
 
+    <!-- JS Script -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/inquiry.js"></script>
+    <script>
+        // Auto-update footer year
+        document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
 </body>
 </html>
