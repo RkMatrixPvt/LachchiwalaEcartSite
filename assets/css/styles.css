@@ -1,16 +1,18 @@
 :root {
-    --bg: #3a0707; 
-    --accent: #e7caa3; 
+    --bg: #3a0707;
+    --accent: #e7caa3;
     --muted: #ffffff;
     --card-bg: #4b0b0b;
     --glass: rgba(255,255,255,0.03);
     --radius: 12px;
     --container: 1100px;
-    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    /* 🔥 BRAND FONT (LOGO FONT) */
+    --brand-font: "Cinzel", serif;
 }
 
 * {
     box-sizing: border-box;
+    font-family: var(--brand-font);
 }
 
 html, body {
@@ -102,7 +104,7 @@ html, body {
     }
 
 .logo-text h1 {
-    font-family: "Cinzel", serif;
+    /*font-family: "Cinzel", serif;*/
     font-size: 1.9rem;
     font-weight: 700;
     background: linear-gradient(90deg, var(--gold1), var(--gold2));
@@ -114,7 +116,7 @@ html, body {
 }
 
 .logo-text p {
-    font-family: "Poppins", sans-serif;
+    /*font-family: "Poppins", sans-serif;*/
     margin: 0;
     font-size: 12px;
     /*color: #d16a44;*/
@@ -421,7 +423,7 @@ html, body {
 }
 
 .hero-text h1 {
-    font-family: "Playfair Display", serif;
+    font-family: var(--brand-font);
     font-size: 48px;
     margin: 0;
     color: var(--accent);
@@ -533,7 +535,7 @@ html, body {
 }
 
 .section-title {
-    font-family: "Playfair Display", serif;
+    font-family: var(--brand-font);
     font-size: 28px;
     color: var(--accent);
     margin-bottom: 20px;
@@ -973,7 +975,7 @@ html, body {
 
     /* Title styling */
     .top-row h1 {
-        font-family: "Playfair Display", serif;
+        font-family: var(--brand-font);
         color: var(--accent);
         font-size: 2rem;
         margin: 0 0 18px;
@@ -1105,6 +1107,7 @@ html, body {
     }
 
     .contact-form input,
+    .contact-form select,
     .contact-form textarea {
         background: rgba(255, 255, 255, 0.05);
         color: var(--light);
@@ -1117,11 +1120,36 @@ html, body {
         margin-top: 6px;
     }
 
-        .contact-form input:focus,
+        .contact-form input:focus, .contact-form select:focus,
         .contact-form textarea:focus {
             border-color: var(--accent);
             box-shadow: 0 0 6px rgba(255, 210, 122, 0.4);
         }
+
+    .contact-form select {
+        background-color: #4d1313; /* dark chocolate */
+        color: #f5d09a; /* text in normal view */
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: 1px solid #f5d09a;
+        font-size: 1rem;
+        width: 100%;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+        /* Fix the options text color when dropdown opens */
+        .contact-form select option {
+            background-color: #4d1313; /* same as dropdown background */
+            color: #f5d09a; /* gold text visible on dark background */
+            padding: 10px;
+        }
+
+            /* Optional: hover highlight for better UX */
+            .contact-form select option:hover {
+                background-color: #ffd70033; /* light gold hover effect */
+            }
 
     /* Submit Button */
     .contact-form .btn-primary {
@@ -1141,6 +1169,47 @@ html, body {
             background: var(--gold2);
             transform: scale(1.05);
         }
+
+
+.contact-info {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 24px 20px;
+    border-radius: 12px;
+    border: 1px solid rgb(231 202 163);
+    box-shadow: 0 0 10px rgb(231 202 163);
+    margin: 40px 0;
+    /*box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);*/
+    font-family: 'Inter', sans-serif;
+   /* color: #4b2e2e;*/
+    /*border: 1px solid #e0cfc0;*/
+}
+
+    .contact-info h2 {
+        font-size: 1.75rem;
+        margin-bottom: 12px;
+        color: var(--accent);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .contact-info p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 8px;
+    }
+
+    .contact-info a {
+        color: #b03a2e;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        .contact-info a:hover {
+            color: #7a3e2f;
+            text-decoration: underline;
+        }
+
 
 /* Map Section */
 .map iframe {

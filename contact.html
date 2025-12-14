@@ -8,15 +8,13 @@
     <meta name="keywords" content="Contact Lachchhiwala's, customer support, order sweets, snack inquiries, WhatsApp chat, RKMatrix Technologies">
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/png" href="assets/images/logo.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <!-- Logo Section -->
             <div class="brand">
                 <img src="assets/images/logo.png" alt="Lachchhiwala's logo" />
                 <div class="logo-text">
@@ -31,7 +29,6 @@
                 <a href="contact.html">Contact</a>
             </nav>
             <div class="header-actions">
-                <!--<button id="openCart" class="cart-btn">🛒 <span id="badge" class="cart-badge" style="display:none">0</span></button>-->
                 <button id="menuToggle" class="menu-toggle">☰</button>
             </div>
         </div>
@@ -43,15 +40,56 @@
             We’d love to hear from you! Whether you’re a food lover, looking for wholesale supply,
             or wish to collaborate — Lachchhiwala’s is always happy to connect.
         </p>
+
+        <!-- Contact Form -->
         <form id="contactForm" class="contact-form">
-            <label>Full name<input name="name" required></label>
-            <label>Email<input name="email" type="email" required></label>
-            <label>Message<textarea name="message" rows="5" required></textarea></label>
+            <label>
+                Full Name
+                <input name="name" required>
+            </label>
+
+            <label>
+                Email
+                <input name="email" type="email" required>
+            </label>
+
+            <label>
+                Contact Number
+                <input name="phone" type="tel" pattern="[0-9]{10}" placeholder="Enter 10-digit number" required>
+            </label>
+
+            <label>
+                Reason for Contact
+                <select name="reason" required>
+                    <option value="">-- Select Reason --</option>
+                    <option value="retailer_inquiry">Retailer / Store Inquiry</option>
+                    <option value="distribution_request">Distribution Partnership</option>
+                    <option value="bulk_order">Bulk / Wholesale Order</option>
+                    <option value="product_feedback">Product Feedback</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+
+            <label>
+                Message
+                <textarea name="message" rows="5" required></textarea>
+            </label>
+
             <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
+
+        <!-- Contact Info Section -->
+        <div class="contact-info">
+            <h2>Our Contact Details</h2>
+            <p>
+                <strong>Address:</strong> FH4, Happy Homes Apartment, Juhi Kalan, Saket Nagar, Kanpur, Uttar Pradesh 208014, India<br>
+                <strong>Email:</strong> <a href="lachchhiwala@gmail.com">lachchhiwala@gmail.com</a><br>
+                <strong>Phone:</strong> <a href="tel:+917310141205">+91 73101 41205</a>
+            </p>
+        </div>
+
+        <!-- Embedded Map -->
         <div class="map">
-            <!-- Embedded map placeholder -->
-            <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019..." style="width:100%;height:280px;border:0;" allowfullscreen="" loading="lazy"></iframe>-->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3572.8107148290087!2d80.3109638752543!3d26.429584276938396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c475095b8044f%3A0xff2aa500d52556d3!2sHappy%20Homes%20Apartment!5e0!3m2!1sen!2sin!4v1752341102497!5m2!1sen!2sin"
                     width="100%" height="280px" style="border: 0; border-radius: 8px;" allowfullscreen="" loading="lazy">
             </iframe>
@@ -78,7 +116,6 @@
             <div class="footer-right social-links">
                 <a href="https://www.instagram.com/lachchhiwala/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="index.html" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <!--<a href="index.html" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>-->
             </div>
         </div>
     </footer>

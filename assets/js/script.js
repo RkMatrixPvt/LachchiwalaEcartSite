@@ -48,39 +48,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ---------- Sample Data ---------- */
 function getSampleProducts(){
-  return [
-      {
-          id: 1,
-          name: "Buknu Blast",
-          price: 99,
-          category: "Spice Blend",
-          image: "assets/images/Products/buknublast/1.png",
-          description: "A fiery, traditional spice mix bursting with bold flavors — perfect for sprinkling on snacks."
-      },
-      {
-          id: 2,
-          name: "Kaitha Chaska",
-          price: 129,
-          category: "Fruit-Based Seasoning",
-          image: "assets/images/Products/kaithachaska/1.png",
-          description: "Tangy kaitha (wood apple) seasoning with a hint of sweetness — ideal for chaats and fruits."
-      },
-      {
-          id: 3,
-          name: "Tangy Touch",
-          price: 89,
-          category: "Snack Masala",
-          image: "assets/images/Products/tangytouch/1.png",
-          description: "Crispy roasted chickpeas coated in zesty masala — a crunchy, protein-packed snack."
-      },
-      {
-          id: 4,
-          name: "Zing Mix",
-          price: 109,
-          category: "Flavored Blend",
-          image: "assets/images/Products/zingmix/1.png",
-          description: "A vibrant mix of spices and herbs for instant zing — great with lemonade, yogurt, or salads."
-      },
+    return [
+        {
+            id: 1,
+            name: "Buknu Blast",
+            price: 99,
+            category: "Spice Blend",
+            badge: "Daily Use 🌿",
+            filters: ["Daily Use", "Healthy", "Traditional"],
+            image: "assets/images/Products/buknublast/1.png",
+            description: "Haldi, namak aur traditional aromatic spices ka wholesome buknu blend — taste ke saath natural goodness, rotis aur parathas ke liye perfect."
+        },
+        {
+            id: 2,
+            name: "Kaitha Chaska",
+            price: 129,
+            category: "Fruit-Based Seasoning",
+            badge: "Chatpata 🍋",
+            filters: ["Tangy", "Chatpata", "Snack Special"],
+            image: "assets/images/Products/kaithachaska/1.png",
+            description: "Sukhe kaitha (wood apple), namak aur secret spices se bana intense chatpata seasoning — addictive tang jo har bite ko flavourful bana de."
+        },
+        {
+            id: 3,
+            name: "Tangy Touch",
+            price: 89,
+            category: "Seasoning Salt",
+            badge: "Instant Zing ⚡",
+            filters: ["Tangy", "Quick Fix", "Snack Special"],
+            image: "assets/images/Products/tangytouch/1.png",
+            description: "Hand-ground garlic, red chili, kopra aur pure salt se bana premium seasoning — sirf ek sprinkle aur food ho jaye instant tangy & savoury."
+        },
+        {
+            id: 4,
+            name: "Teekha Twist",
+            price: 109,
+            category: "Spicy Blend",
+            badge: "Spicy 🔥",
+            filters: ["Spicy", "Bold Flavour", "Snack Special"],
+            image: "assets/images/Products/teekhatwist/1.png",
+            description: "Potent red chili, garlic aur mixed spices ka fiery tadka-style blend — bina tel ke instant heat aur authentic spicy flavour."
+        },
+        {
+            id: 5,
+            name: "Zing Mix",
+            price: 109,
+            category: "Flavored Blend",
+            badge: "Fresh & Light 🌿",
+            filters: ["Healthy", "Refreshing", "Daily Use"],
+            image: "assets/images/Products/zingmix/1.png",
+            description: "Dhaniya seeds, namak aur aromatic spices se bana refreshing blend — cooling taste ke saath digestion aur daily meals ke liye ideal."
+        }
+
     //{
     //  id: 5,
     //  name: "Rainbow Sprinkles Box",
